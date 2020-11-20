@@ -1,0 +1,25 @@
+<div>
+
+
+
+  <div class="wid250">
+
+    <div class="mar10-0" *ngFor="let city,index as i of citys" id="city{{ i }}">
+      <a mat-stroked-button color=primary class="floatL mar0-10" [routerLink] = "'forecast/'+city">{{ city }}</a>
+      <a mat-mini-fab color=warn class="floatR" (click)="removeCity(i)">X</a>
+      <a mat-raised-button color=primary class="floatR mar0-10" (click)="removeCity(i)">Default</a>
+
+      <div class="clear"></div>
+    </div>
+
+    <br><br>
+    <!-- <form action="get"> -->
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Enter new city" [(ngModel)]="getCity">
+      </mat-form-field>
+      <br>
+
+      <button (click)="addCity()" mat-flat-button color=primary>ADD CITY</button>
+    <!-- </form> -->
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.wid250 {
+  width: 300px;
+}
+
+.mar10-0 {
+  margin: 10px 0px;
+}
+
+.mar0-10 {
+  margin: 0px 10px;
+}
+
+.floatL {
+  float: left;
+}
+.floatR {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+  #citys {
+    margin: 100px 100px;
+}

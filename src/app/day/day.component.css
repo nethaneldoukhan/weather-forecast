@@ -1,0 +1,24 @@
+.floatR {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+mat-card {
+    width: 200px;
+    padding: 3px;
+    margin: 0px 10px;
+    float: left;
+}
+
+.example-header-image {
+    background-size: cover;
+}
+
+#date {
+    padding-top: 15px;
+    font-weight: bolder;
+    text-align: end;
+}

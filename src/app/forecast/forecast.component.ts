@@ -11,9 +11,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ForecastComponent implements OnInit {
 
-  // temperatureInput: number;
-  // windSpeedInput: number;
-  // forcast: any;
 
   days: Day[] = [];
   loc: string;
@@ -26,16 +23,31 @@ export class ForecastComponent implements OnInit {
     })
   }
 
+  getClass (position): String {
+    if (position === 0) {
+      return 'classFirst';
+    } else {
+      return 'classOther';
+    }
+  }
+
+  getBgImg (des): String {
+      return des.replace(" ", "_");
+  }
+
+
   async fetchForcast(): Promise<void> {
     try {
       const answer: ForecastResponse = await this.weatherService.getCurrentWeather(this.loc);
       console.info(answer);
-      this.days = answer.list.map(day => ({
+      this.days = answer.list.map((day, i) => ({
         date: new Date (day.dt_txt),
         temperature: day.main.temp,
         description: day.weather[0].description,
         humidity: day.main.humidity,
-        windSpeed: day.wind.speed
+        windSpeed: day.wind.speed,
+        class: this.getClass(i),
+        bgImg: this.getBgImg(day.weather[0].description)
       })).filter((item, i) => i % 8 === 0);
       console.log(this.days);
     } catch {
@@ -47,12 +59,6 @@ export class ForecastComponent implements OnInit {
   updateLocation(): void {
     console.info(this.loc);
     this.fetchForcast();
-    // const newDay: Day = {
-    //   date: new Date(this.dateInput),
-    //   temperature: this.temperatureInput,
-    //   windSpeed: this.windSpeedInput
-    // };
-    // this.days.push(newDay);
   }
 
   removeDay(day: Day): void {

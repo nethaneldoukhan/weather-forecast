@@ -4,4 +4,6 @@ export class Day {
     description: string;
     humidity: number;
     windSpeed: number;
+    class: String;
+    bgImg: String;
 }

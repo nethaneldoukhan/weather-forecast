@@ -8,11 +8,13 @@ import { Day } from '../models/day';
 })
 export class DayComponent implements OnInit {
 
-  weatherImg: string = "https://material.angular.io/assets/img/examples/shiba1.jpg";
+  weatherImg: string = "/assets/img/bgImg.jpg";
+  // weatherImg: string = "https://material.angular.io/assets/img/examples/shiba1.jpg";
   options: any = {day: "numeric", month: "numeric", year: "numeric"};
 
+
   @Input() day: Day;
-  @Output() dayRemove = new EventEmitter();
+  @Output() dayRemove = new EventEmitter();  
 
   emitDayRemoved() {
     this.dayRemove.emit(this.day);

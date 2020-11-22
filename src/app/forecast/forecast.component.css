@@ -1,8 +1,11 @@
-/* .clear {
+.clear {
     clear: both;
-} */
+}
 
-.myColorClass1 {
+.floatR {
+    float: right;
+}
+
+.wid600 {
     width: 600px;
-    color: red;
 }

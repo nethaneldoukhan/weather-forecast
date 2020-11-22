@@ -1,4 +1,4 @@
-<mat-card class="example-card">
+<mat-card class="example-card {{day.class}}">
     <mat-card-content class="example-header-image" [ngStyle]="{'background-image': 'url(' + weatherImg + ')'}" >
     
         <p id="date">{{ day.date.toLocaleString('he-il', options) }}</p>
@@ -7,8 +7,8 @@
         <p>Humidity: {{ day.humidity }}</p>
         <p>Wind speed: {{ day.windSpeed }}</p>
         
-        <a class="floatR" mat-mini-fab color=warn (click)="emitDayRemoved()">X</a>
-        <div class="clear"></div>
+        <!-- <a class="floatR" mat-mini-fab color=warn (click)="emitDayRemoved()">X</a>
+        <div class="clear"></div> -->
     </mat-card-content>
 </mat-card>
 <!-- <div class="clear"></div> -->

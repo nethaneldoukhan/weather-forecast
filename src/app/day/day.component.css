@@ -6,15 +6,25 @@
     clear: both;
 }
 
-mat-card {
-    width: 200px;
+.classFirst {
+    width: 500px;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.classOther {
+    width: 20%;
     padding: 3px;
-    margin: 0px 10px;
+    margin: 10px 10px;
     float: left;
 }
 
+p {
+    margin: 25px 2px;
+}
+
 .example-header-image {
-    background-size: cover;
+    background: white no-repeat center/100% 100%;
 }
 
 #date {

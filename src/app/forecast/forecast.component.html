@@ -10,11 +10,10 @@
 <br> -->
 <!-- <button (click)="updateLocation()">UPDATE LOCATION</button> -->
 
-<a routerLink="/">Home</a>
-<h2>{{ loc }}</h2>
-    <div *ngFor="let day, index as i of days">
-        <app-day *ngIf="i == 0" [class.myColorClass1]="i == 0" [day]="day" (dayRemove)="removeDay($event)">
-        <!-- <div class="clear"></div> -->
+    <a routerLink="/">Home</a>
+
+    <h2>{{ loc }}</h2>
     
-        </app-day>
-    </div>
+    <app-day *ngFor="let day, index as i of days" [day]="day" (dayRemove)="removeDay($event)">
+        <div class="clear"></div>
+    </app-day>

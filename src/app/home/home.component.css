@@ -6,6 +6,20 @@
     clear: both;
 }
 
-#citys {
-    margin: 100px 100px;
+div {
+    height: 400px;
+    background: white url("/assets/img/bgImg.jpg") no-repeat center/100% 100%;
 }
+
+p {
+    margin-top: 0px;
+    padding-top: 240px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(63 81 181);
+}
+
+/* #citys {
+    margin: 100px 100px;
+} */

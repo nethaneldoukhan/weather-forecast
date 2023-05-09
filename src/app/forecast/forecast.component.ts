@@ -23,7 +23,7 @@ export class ForecastComponent implements OnInit {
     })
   }
 
-  getClass (position): String {
+  getClass (position: number): String {
     if (position === 0) {
       return 'classFirst';
     } else {
@@ -31,7 +31,7 @@ export class ForecastComponent implements OnInit {
     }
   }
 
-  getBgImg (des): String {
+  getBgImg (des: string): String {
       return des.replace(" ", "_");
   }
 

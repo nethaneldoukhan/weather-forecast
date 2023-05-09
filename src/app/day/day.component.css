@@ -12,6 +12,11 @@
     margin: 10px auto;
 }
 
+.classFirst .mat-card-content p:nth-child(5) {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
 .classOther {
     width: 20%;
     padding: 3px;
@@ -23,8 +28,32 @@ p {
     margin: 25px 2px;
 }
 
+p span {
+    background-color: #ffffff8f;
+}
+
 .example-header-image {
-    background: white no-repeat center/100% 100%;
+    background: white no-repeat center/cover;
+}
+
+.clear_sky {
+    background-image: url('../../assets/img/bgImg.jpg');
+}
+
+.overcast_clouds, .broken_clouds {
+    background-image: url('../../assets/img/nuageux.jpg');
+}
+
+.scattered_clouds, .few_clouds {
+    background-image: url('../../assets/img/few_clouds.jpg');
+}
+
+.light_rain {
+    background-image: url('../../assets/img/975.jpg');
+}
+
+.moderate_rain {
+    background-image: url('../../assets/img/975.jpg');
 }
 
 #date {

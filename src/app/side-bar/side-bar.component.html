@@ -4,10 +4,10 @@
 
   <div class="wid250">
 
-    <div class="mar10-0" *ngFor="let city,index as i of citys" id="city{{ i }}">
-      <a mat-stroked-button color=primary class="floatL mar0-10" [routerLink] = "'forecast/'+city">{{ city }}</a>
+    <div class="mar10-0" *ngFor="let city,index as i of citys" id="city_{{ i }}">
+      <a mat-stroked-button color=primary class="floatL mar0-10" [routerLink] = "'forecast/' + city">{{ city }}</a>
       <a mat-mini-fab color=warn class="floatR" (click)="removeCity(i)">X</a>
-      <a mat-raised-button color=primary class="floatR mar0-10" (click)="removeCity(i)">Default</a>
+      <a mat-raised-button color=primary class="floatR mar0-10" *ngIf="i !== 0" (click)="defaultCity(i)">Default</a>
 
       <div class="clear"></div>
     </div>

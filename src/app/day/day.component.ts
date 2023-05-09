@@ -8,7 +8,6 @@ import { Day } from '../models/day';
 })
 export class DayComponent implements OnInit {
 
-  weatherImg: string = "/assets/img/bgImg.jpg";
   // weatherImg: string = "https://material.angular.io/assets/img/examples/shiba1.jpg";
   options: any = {day: "numeric", month: "numeric", year: "numeric"};
 
@@ -23,8 +22,7 @@ export class DayComponent implements OnInit {
 
   constructor() {  }
 
-    ngOnInit(): void {
-  }
+    ngOnInit(): void { }
 
 
 }

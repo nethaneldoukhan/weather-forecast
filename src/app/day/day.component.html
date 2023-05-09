@@ -1,14 +1,14 @@
 <mat-card class="example-card {{day.class}}">
-    <mat-card-content class="example-header-image" [ngStyle]="{'background-image': 'url(' + weatherImg + ')'}" >
-    
-        <p id="date">{{ day.date.toLocaleString('he-il', options) }}</p>
-        <p>{{ day.description }}</p>
-        <p>Temperature: {{ day.temperature.toFixed(0) }}°</p>
-        <p>Humidity: {{ day.humidity }}</p>
-        <p>Wind speed: {{ day.windSpeed }}</p>
+    <mat-card-content class="example-header-image {{day.bgImg}}"> <!-- [ngStyle]="{'background-image': 'url(' + weatherImg + ')'}" -->
+
+        <p id="date"><span>{{ day.date.toLocaleString('he-il', options) }}</span></p>
+        <p><span>{{ day.description }}</span></p>
+        <p><span>Temperature: {{ day.temperature.toFixed(0) }}°</span></p>
+        <p><span>Humidity: {{ day.humidity }}</span></p>
+        <p><span>Wind speed: {{ day.windSpeed }}</span></p>
         
-        <!-- <a class="floatR" mat-mini-fab color=warn (click)="emitDayRemoved()">X</a>
-        <div class="clear"></div> -->
+        <a class="floatR" mat-mini-fab color=warn *ngIf="day.class !== 'classFirst'" (click)="emitDayRemoved()">X</a>
+        <div class="clear"></div>
     </mat-card-content>
 </mat-card>
 <!-- <div class="clear"></div> -->

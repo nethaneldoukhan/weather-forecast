@@ -8,10 +8,10 @@ export class WeatherService {
 
   constructor() { }
 
-   async getCurrentWeather(loc): Promise<ForecastResponse> {
+  async getCurrentWeather(loc: String): Promise<ForecastResponse> {
 
-      const data: Response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${loc}&appid=b2af191bb679ff73acfe40453bbc31cd&units=metric`);
-      return data.json();
-      }
-    }
+    const data: Response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${loc}&appid=b2af191bb679ff73acfe40453bbc31cd&units=metric`);
+    return data.json();
+  }
+}
     

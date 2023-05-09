@@ -27,7 +27,7 @@ export class SideBarComponent implements OnInit {
   }
 
 
-  removeCity(i): void {
+  removeCity(i: number): void {
     this.citys.splice(i, 1);
     this.saveToLS(this.citys);
   }
@@ -42,12 +42,18 @@ export class SideBarComponent implements OnInit {
     }
   }
 
-  saveToLS(citys): void {
+  defaultCity(i: number): void {
+    const city: string = this.citys[i];
+    this.citys.splice(i, 1);
+    this.citys.unshift(city);
+    this.saveToLS(this.citys);
+  }
+
+  saveToLS(citys: object): void {
     var citysJSON: string = JSON.stringify(citys);
     localStorage.setItem("citys", citysJSON);
 }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
